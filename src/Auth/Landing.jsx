@@ -6,11 +6,11 @@ export default function Landing({navigation}) {
   return (
     <View style = {{display: 'flex', flex: 1}}>
 		 <ImageBackground source={image} resizeMode="cover" style = {styles.Main}>
-		 <TouchableOpacity  style = {styles.Buttons}>
+		 <TouchableOpacity  style = {styles.Buttons} onPress = {()=> navigation.navigate("Signin")}>
 		<Text style = {styles.InnerButton}>Continue as Staff</Text>
 		</TouchableOpacity>
 
-		<TouchableOpacity style = {styles.Buttons}>
+		<TouchableOpacity style = {styles.Buttons} onPress = {()=> navigation.navigate("Signin")}>
 		<Text style = {styles.InnerButton}>Continue as Student</Text>
 		</TouchableOpacity>
 		

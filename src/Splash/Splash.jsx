@@ -6,7 +6,7 @@ export default function Splash({navigation}) {
 
   setTimeout(()=>{
     navigation.replace("Landing");
-  }, 350);
+  }, 3500);
 
   return (
     <View style = {styles.Main}>
