@@ -28,17 +28,21 @@ export default function Home() {
           return <Ionicons name="md-menu" size={24} color= {color} />;
         }
 
-        
       },
       tabBarActiveTintColor: '#003b5c',
       tabBarInactiveTintColor: 'gray',
     })}
     >
-        <Tab.Screen name="Dashboard" component={Dashboard} />
-        <Tab.Screen name="Buses" component={Buses} />
-        <Tab.Screen name="Dining" component={Dining} />
-        <Tab.Screen name="Protection" component={Protection} />
-        <Tab.Screen name="Menu" component={Menu} />
+        <Tab.Screen name="Dashboard" component={Dashboard} 
+        options = {{header: ()=> null}}/>
+        <Tab.Screen name="Buses" component={Buses} 
+        options = {{header: ()=> null}}/>
+        <Tab.Screen name="Dining" component={Dining} 
+        options = {{header: ()=> null}}/>
+        <Tab.Screen name="Protection" component={Protection} 
+        options = {{header: ()=> null}}/>
+        <Tab.Screen name="Menu" component={Menu} 
+        options = {{header: ()=> null}}/>
       </Tab.Navigator>
   )
 }

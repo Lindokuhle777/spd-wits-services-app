@@ -12,7 +12,8 @@ export default function App() {
         <Stack.Screen name="Splash" component={Splash} 
         options ={{header: ()=> null}}/>
         <Stack.Screen name = "Landing" component={Landing}/>
-        <Stack.Screen name = "Home" component={Home}/>
+        <Stack.Screen name = "Home" component={Home}
+        options = {{header: ()=> null}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
