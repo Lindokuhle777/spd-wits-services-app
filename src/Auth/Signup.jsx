@@ -1,17 +1,29 @@
 import React from 'react';
 import {Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 
-export default function Signin() {
+export default function Signin({route}) {
+
+  const {type} = route.params;
+
   return (
     <View style = {styles.Main}>
-        <Text>Sign in</Text>
+        <Text style = {{alignSelf: 'center', color: 'white', fontSize: 28, fontWeight: '500'}}>Wits Services</Text>
+        <Text style = {{alignSelf: 'center', color: 'white', fontSize: 15, fontWeight: '500', marginBottom: 50}}>{type}</Text>
         <TextInput placeholder='Full name' style = {styles.Input}/>
         <TextInput placeholder='Email' style = {styles.Input}/>
         <TextInput placeholder='Password' secureTextEntry style = {styles.Input}/>
 
+        {type === "Staff" &&
+        <Text style = {{color: 'white'}}>Choose Department</Text>
+        }
+
         <TouchableOpacity style = {styles.Buttons}>
-          <Text style = {{fontWeight: 'bold'}}>Create Account</Text>
+          <Text style = {{fontWeight: 'bold', color: 'white'}}>Create Account</Text>
         </TouchableOpacity>
+
+        <Text style = {{alignSelf: 'center', color: 'gray', fontSize: 15, fontWeight: '500', marginTop: 50}}>Already have an account? <Text style = {{fontWeight: 'bold', color: '#BBA14F', textDecorationLine: 'underline'}}>LOGIN</Text></Text>
+
+        
     </View>
   )
 }
@@ -21,7 +33,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    paddingTop: 49,
+    paddingTop: 100,
     paddingHorizontal: 12, 
     backgroundColor:'#003b5c'
   }, 
@@ -38,6 +50,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     marginTop: 60, 
-    backgroundColor: 'yellow'
+    backgroundColor: '#BBA14F'
   }
 }); 
